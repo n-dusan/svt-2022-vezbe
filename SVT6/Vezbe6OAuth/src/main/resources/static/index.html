@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OAuth2</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" />
+    <link rel="stylesheet" type="text/css"
+          href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="margin: 30px">
+    <div class="container unauthenticated" style="text-align: center">
+        <input type="button" onclick="location.href='http://localhost:8080/oauth2/authorization/github';"
+               class="btn btn-primary" value="GitHub Prijava" />
+        <h3>Nakon prijave bice prikazana tabela sa timovima</h3>
+    </div>
+    <div class="container authenticated" style="display: none; text-align: center">
+        Ulogovan korisnik: <span id="user"></span>
+        <div>
+            <button onclick="logout()" class="btn btn-primary" style="margin: 20px">Odjava</button>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                <th style="text-align: center;" scope="col">Name</th>
+                <th style="text-align: center;" scope="col">City</th>
+                </thead>
+                <tbody id="clubs"></tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript"
+    src="/webjars/js-cookie/js.cookie.js"></script>
+    <script type="text/javascript">
+          $.ajaxSetup({
+                // citava ova funkcija sluzi da bi sprecili Cross-Site Request Forgery (CSRF)
+                // https://owasp.org/www-community/attacks/csrf
+                beforeSend : function(xhr, settings) {
+                  if (settings.type == 'POST' || settings.type == 'PUT'
+                      || settings.type == 'DELETE') {
+                    if (!(/^http:.*/.test(settings.url) || /^https:.*/
+                        .test(settings.url))) {
+                      xhr.setRequestHeader("X-XSRF-TOKEN",
+                          Cookies.get('XSRF-TOKEN'));
+                    }
+                  }
+                }
+              });
+          $.get("/user", function(data) {
+              if(data.hasOwnProperty('name')) {
+                  $("#user").html(data.name);
+                  $(".unauthenticated").hide();
+                  $(".authenticated").show();
+              }
+          });
+          $.get("/clubs", function(data) {
+              data.map((club) => {
+                  $("#clubs").append("<tr scope=\"row\" id="+club.id+"><td>"+club.name+"</td><td>"+club.city+"</td></tr>");
+                  }
+              );
+          });
+          function logout() {
+            $.post("/logout", function() {
+                console.log("logout");
+                $("#user").html('');
+                $("#clubs").html('');
+                $(".unauthenticated").show();
+                $(".authenticated").hide();
+            })
+            return true;
+          }
+        </script>
+</body>
+</html>
