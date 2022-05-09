@@ -1,7 +1,0 @@
-java -jar back-0.0.1-SNAPSHOT.jar
-
-Kredencijali za login:
-miroslav : miroslav - ADMINISTRATOR
-tamara : tamara     - KORISNIK
-petar : petar       - KORISNIK
-
