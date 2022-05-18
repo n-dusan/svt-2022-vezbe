@@ -18,3 +18,6 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 
 4. Isto pitanje i za brisanje objave, pise da samo moderator moze da ukloni prijavljenu objavu, da li onda isto moramo da implementiramo brisanje(jer ukoliko to uradimo onda moramo i prijavu)
 * Moderator moze obrisati proizvoljnu objavu bez da postoji prijava na tu objavu. Treba razmisliti kako ce to uticati na prijave koje postoje na tu objavu koju je moderator obrisao.
+
+5. Da li se prilikom kreiranja post-a flairovi kreiraju, ili se biraju iz nekog menija?
+* Moderator kreira, azurira i brise flair, a korisnik ga bira iz opadajuceg menija pri kreiranju objave.
