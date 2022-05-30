@@ -21,3 +21,6 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 
 5. Da li se prilikom kreiranja post-a flairovi kreiraju, ili se biraju iz nekog menija?
 * Moderator kreira, azurira i brise flair, a korisnik ga bira iz opadajuceg menija pri kreiranju objave.
+
+6. Да ли А2 функционалност укључује А1? За оцену 8 не треба да се имплементирају захтеви за модератора, која би онда његова улога у апликацији била? Само би у суштини требало да се промени улога обичног корисника на модератора или још нешто?
+* U zavisnosti od toga kako ste modelovali, na A2 misli se na automatsko prebacivanje korisnika iz uloge Moderator u ulogu User ili samo uklanjanje korisnika iz vezne tabele Moderator.
