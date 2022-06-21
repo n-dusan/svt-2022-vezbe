@@ -37,3 +37,5 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 10. Takodje da li je okej da imam prikaz svih postova svih komjunitija i sa strane dodavanje posta, bez da prvo udjem u neki komjuniti, vec da na glavnoj strani kliknem create post i odaberem komjuniti? Tako sam pravio za front predmet. 
 * Za ocenu 6 nije bitno gde su raspoređeni podaci na frontendu, ali mora da postoji vizuelna naznaka. Recimo, ako kreirate novu objavu mora na frontendu sa početne strane postojati neki padajuci meni u kojem naznačite kojoj zajednici pripada ta objava.
 
+11. Za ocenu 6 nije potreban login, pa onda nema smisla da pri kreiranju neko postaje moderator?
+* Očekuje se da za 6 imate implementiranu logiku kreiranja moderatora
