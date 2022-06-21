@@ -24,3 +24,10 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 
 6. Да ли А2 функционалност укључује А1? За оцену 8 не треба да се имплементирају захтеви за модератора, која би онда његова улога у апликацији била? Само би у суштини требало да се промени улога обичног корисника на модератора или још нешто?
 * U zavisnosti od toga kako ste modelovali, na A2 misli se na automatsko prebacivanje korisnika iz uloge Moderator u ulogu User ili samo uklanjanje korisnika iz vezne tabele Moderator.
+
+7. Pise za "top" sortiranje po broju upvota i downota, da li to znaci da onaj ko ima najvise reakcija ce biti na vrhu ili gde je karma najveca?
+* Ona objava koja ima najveću karmu
+
+8. Da li objave mogu da se sortiranju i unutar neke zajednice ili samo na pocetnoj stranici aplikacije?
+* Trebale bi da mogu na oba mesta
+ 
