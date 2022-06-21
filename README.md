@@ -30,4 +30,10 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 
 8. Da li objave mogu da se sortiranju i unutar neke zajednice ili samo na pocetnoj stranici aplikacije?
 * Trebale bi da mogu na oba mesta
- 
+
+9. Posto login nije za 6, da li je potrebno da brisanje postova i zajednica bude implementirano? U tom slucaju delete button bi mogao svako da pritisne.
+* Pod ažuriranjem se očekuje i brisanje. Pošto nema login-a, svaki korisnik može da obriše objave i zajednice. 
+
+10. Takodje da li je okej da imam prikaz svih postova svih komjunitija i sa strane dodavanje posta, bez da prvo udjem u neki komjuniti, vec da na glavnoj strani kliknem create post i odaberem komjuniti? Tako sam pravio za front predmet. 
+* Za ocenu 6 nije bitno gde su raspoređeni podaci na frontendu, ali mora da postoji vizuelna naznaka. Recimo, ako kreirate novu objavu mora na frontendu sa početne strane postojati neki padajuci meni u kojem naznačite kojoj zajednici pripada ta objava.
+
