@@ -39,3 +39,9 @@ Rok za poslednji commit na SVT repozitorijumu je 01.07 u 23:59:59. Svaki commit 
 
 11. Za ocenu 6 nije potreban login, pa onda nema smisla da pri kreiranju neko postaje moderator?
 * Očekuje se da za 6 imate implementiranu logiku kreiranja moderatora
+
+12. Da li za sliku objave i za sliku korisnika trebamo da imamo upload ili možemo samo da koristimo kao string url slike?
+* Misli se na upload
+
+13. Na početnoj stranici piše prikaz nasumičnih objava iz nasumičnih zajednica na šta se tačno misli? 
+* Prikaz objava sa različitih zajednica na početnoj stranici, gde na prikazu objave postoji i link koji vodi ka toj zajednici.
